@@ -1,5 +1,9 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.5deb2
+-- https://www.phpmyadmin.net/
+--
 -- Host: localhost:3306
--- Generation Time: May 09, 2022 at 10:04 AM
+-- Generation Time: May 12, 2022 at 08:41 PM
 -- Server version: 10.3.34-MariaDB-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
@@ -16,8 +20,6 @@ SET time_zone = "+00:00";
 
 --
 -- Database: `website`
-CREATE DATABASE `website`;
-USE `website`;
 --
 
 -- --------------------------------------------------------
@@ -32,18 +34,8 @@ CREATE TABLE `register` (
   `email` varchar(50) NOT NULL,
   `phone` bigint(10) UNSIGNED ZEROFILL NOT NULL,
   `cpf` bigint(11) UNSIGNED ZEROFILL NOT NULL,
-  `dtm_register` datetime NOT NULL DEFAULT current_timestamp(),
-  UNIQUE (`email`),
-  UNIQUE (`cpf`)
+  `dtm_register` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `register`
---
-
-ALTER TABLE `register` ADD PRIMARY KEY(`id_register`);
-ALTER TABLE `register` CHANGE `id_register` `id_register` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
 
 --
 -- Dumping data for table `register`
@@ -74,7 +66,6 @@ ALTER TABLE `register`
 ALTER TABLE `register`
   MODIFY `id_register` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
-
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
